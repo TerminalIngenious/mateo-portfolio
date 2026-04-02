@@ -1,5 +1,4 @@
 'use client'
-
 import { useEffect, useState } from 'react'
 import styles from './Projects.module.css'
 
@@ -11,6 +10,7 @@ interface Project {
   tags: string[]
   image_url: string
   size: string
+  project_url?: string
 }
 
 export default function Projects() {
@@ -56,10 +56,14 @@ export default function Projects() {
         <p className={styles.sectionLabel}>Réalisations</p>
         <h2 className={styles.sectionTitle}>Mes projets</h2>
       </div>
-
       <div className={styles.grid}>
         {projects.map(project => (
-          <div key={project.id} className={`${styles.card} ${styles[project.size] || styles.half}`}>
+          <div
+            key={project.id}
+            className={`${styles.card} ${styles[project.size] || styles.half}`}
+            onClick={() => project.project_url && window.open(project.project_url, '_blank')}
+            style={{ cursor: project.project_url ? 'pointer' : 'default' }}
+          >
             <div className={styles.thumb}>
               {project.image_url ? (
                 <img src={project.image_url} alt={project.title} className={styles.thumbImg} />
@@ -72,9 +76,11 @@ export default function Projects() {
                   </svg>
                 </div>
               )}
-              <div className={styles.overlay}>
-                <span className={styles.overlayText}>Voir le projet →</span>
-              </div>
+              {project.project_url && (
+                <div className={styles.overlay}>
+                  <span className={styles.overlayText}>Voir le projet →</span>
+                </div>
+              )}
             </div>
             <div className={styles.info}>
               <p className={styles.projectType}>{project.type}</p>
