@@ -126,3 +126,14 @@
   .nav { grid-template-columns: 1fr; }
   .bottom { flex-direction: column; text-align: center; }
 }
+
+.adminLink {
+  font-size: 0.7rem;
+  color: var(--border-subtle);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.adminLink:hover { color: var(--muted); }

@@ -89,6 +89,7 @@ export default function Footer() {
 
       <div className={styles.bottom}>
         <p className={styles.copy}>© {new Date().getFullYear()} Matéo — Tous droits réservés</p>
+        <a href="/admin" className={styles.adminLink}>Admin</a>
         <p className={styles.credit}>
           Créé par <a href="https://matteo-dev.fr" target="_blank" rel="noopener noreferrer">Mattéo Dev</a>
         </p>
