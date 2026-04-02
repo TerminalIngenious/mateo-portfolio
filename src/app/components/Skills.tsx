@@ -24,7 +24,7 @@ const skills = [
         <line x1="22" y1="18" x2="31" y2="18" stroke="currentColor" strokeWidth="1.5"/>
       </svg>
     ),
-    items: ['Portrait & mode', 'Reportage événementiel', 'Photographie de rue', 'Retouche (Lightroom, Photoshop)', 'Composition & cadrage'],
+    items: ['Photoshop', 'Photopea'],
   },
   {
     name: 'Logiciels',
@@ -39,7 +39,7 @@ const skills = [
         <line x1="18" y1="26" x2="18" y2="30" stroke="currentColor" strokeWidth="1.5"/>
       </svg>
     ),
-    items: ['Capcut', 'DaVinci Resolve', 'Photopea'],
+    items: ['Capcut', 'DaVinci Resolve'],
   },
   {
     name: 'Soft skills',
