@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+* { cursor: none; }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #080b09;
+  --bg2: #0d110e;
+  --bg3: #141a15;
+  --accent: #00856F;
+  --accent-light: #00a688;
+  --accent-dim: #00594C;
+  --accent-muted: rgba(0, 133, 111, 0.15);
+  --text: #e8ede9;
+  --muted: #7a8a7c;
+  --border: rgba(0, 133, 111, 0.1);
+  --border-subtle: rgba(255,255,255,0.05);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent-dim); border-radius: 2px; }
+
+/* Selection */
+::selection { background: var(--accent-dim); color: var(--text); }

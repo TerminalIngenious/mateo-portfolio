@@ -1,0 +1,71 @@
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--bg3) 25%,
+    rgba(0, 133, 111, 0.07) 50%,
+    var(--bg3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: 3px;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.line {
+  background: linear-gradient(
+    90deg,
+    var(--bg3) 25%,
+    rgba(0, 133, 111, 0.07) 50%,
+    var(--bg3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: 3px;
+  height: 1em;
+  margin-bottom: 0.6rem;
+}
+
+.title {
+  background: linear-gradient(
+    90deg,
+    var(--bg3) 25%,
+    rgba(0, 133, 111, 0.07) 50%,
+    var(--bg3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: 3px;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+
+.block {
+  background: linear-gradient(
+    90deg,
+    var(--bg3) 25%,
+    rgba(0, 133, 111, 0.07) 50%,
+    var(--bg3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: 3px;
+  width: 100%;
+  aspect-ratio: 16/10;
+}
+
+.circle {
+  background: linear-gradient(
+    90deg,
+    var(--bg3) 25%,
+    rgba(0, 133, 111, 0.07) 50%,
+    var(--bg3) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+  border-radius: 3px;
+  border-radius: 50%;
+}

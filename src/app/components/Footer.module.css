@@ -1,0 +1,128 @@
+.footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 4rem 4rem 2rem;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.2fr 2fr;
+  gap: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logoAccent { color: var(--accent); }
+
+.tagline {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.socials {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-subtle);
+  border-radius: 2px;
+  color: var(--muted);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.social:hover {
+  color: var(--accent);
+  border-color: rgba(0, 133, 111, 0.35);
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.col { display: flex; flex-direction: column; gap: 1rem; }
+
+.colTitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.colList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.colLink {
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.colLink:hover { color: var(--accent); }
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.credit {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.credit a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.credit a:hover { opacity: 0.7; }
+
+@media (max-width: 900px) {
+  .footer { padding: 3rem 1.5rem 2rem; }
+  .top { grid-template-columns: 1fr; gap: 2.5rem; }
+  .nav { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .nav { grid-template-columns: 1fr; }
+  .bottom { flex-direction: column; text-align: center; }
+}

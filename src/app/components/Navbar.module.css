@@ -1,0 +1,108 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 4rem;
+  transition: background 0.4s, padding 0.4s, border-color 0.4s;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background: rgba(8, 11, 9, 0.92);
+  backdrop-filter: blur(12px);
+  padding: 1.1rem 4rem;
+  border-bottom-color: var(--border-subtle);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.logoAccent { color: var(--accent); }
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.link {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.25s;
+}
+
+.link:hover { color: var(--text); }
+.link:hover::after { width: 100%; }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.burgerOpen:first-child { transform: rotate(45deg) translate(4px, 4px); }
+.burgerOpen:last-child { transform: rotate(-45deg) translate(4px, -4px); }
+
+.mobileMenu {
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  background: rgba(8, 11, 9, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+  gap: 1.25rem;
+}
+
+.mobileLink {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.mobileLink:hover { color: var(--accent); }
+
+@media (max-width: 768px) {
+  .nav { padding: 1.2rem 1.5rem; }
+  .scrolled { padding: 1rem 1.5rem; }
+  .links { display: none; }
+  .burger { display: flex; }
+}

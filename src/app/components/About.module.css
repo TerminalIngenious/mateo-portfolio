@@ -1,0 +1,139 @@
+.about {
+  padding: 8rem 4rem;
+  background: var(--bg2);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 6rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visual {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: var(--bg3);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--muted);
+  opacity: 0.25;
+}
+
+.photoPlaceholder p {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.visualOverlay {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 45%;
+  background: linear-gradient(to top, rgba(8,11,9,0.85), transparent);
+}
+
+.visualLabel {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  z-index: 2;
+}
+
+.visualLabel strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.visualLabel span {
+  display: block;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-top: 0.3rem;
+}
+
+.visualBorder {
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.text { display: flex; flex-direction: column; }
+
+.sectionLabel {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  margin-bottom: 2.5rem;
+}
+
+.para {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.stat { display: flex; flex-direction: column; gap: 0.3rem; }
+
+.statNum {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+.statLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .about { padding: 5rem 1.5rem; }
+  .grid { grid-template-columns: 1fr; gap: 3rem; }
+  .visual { max-width: 380px; }
+}
