@@ -5,8 +5,11 @@ import ScrollProgress from './components/ScrollProgress'
 import Providers from './components/Providers'
 
 export const metadata: Metadata = {
-  title: 'Matéo — Monteur Vidéo',
-  description: 'Portfolio de Matéo, monteur vidéo freelance. Montage, color grading, post-production.',
+  title: 'Matéo Goram — Monteur Vidéo',
+  description: 'Portfolio de Matéo Goram, monteur vidéo freelance.',
+  icons: {
+    icon: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
