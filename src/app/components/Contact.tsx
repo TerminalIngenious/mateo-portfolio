@@ -6,13 +6,30 @@ import styles from "./Contact.module.css";
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "sent">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    setTimeout(() => {
+
+    const form = e.target as HTMLFormElement;
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: (form.querySelector("#name") as HTMLInputElement).value,
+        email: (form.querySelector("#email") as HTMLInputElement).value,
+        subject: (form.querySelector("#subject") as HTMLInputElement).value,
+        message: (form.querySelector("#message") as HTMLTextAreaElement).value,
+      }),
+    });
+
+    if (res.ok) {
       setStatus("sent");
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1800);
+      form.reset();
+      setTimeout(() => setStatus("idle"), 3500);
+    } else {
+      setStatus("idle");
+      alert("Une erreur est survenue, réessaie.");
+    }
   };
 
   return (
