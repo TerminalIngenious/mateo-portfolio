@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 
   const { error } = await resend.emails.send({
     from: "Portfolio <onboarding@resend.dev>",
-    to: "matteodevweb@gmail.com",
+    to: "mateoblack81@gmail.com",
     replyTo: email,
     subject: subject || `Nouveau message de ${name}`,
     html: `
@@ -119,7 +119,7 @@ export async function POST(req: NextRequest) {
               <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                   <td style="font-size: 11px; color: #7a8a7c; letter-spacing: 1px;">
-                    Envoyé depuis <span style="color: #00856F;">mateogoram.fr</span>
+                    Envoyé depuis <span style="color: #00856F;">https://mateo-portfolio-seven.vercel.app</span>
                   </td>
                   <td align="right" style="font-size: 11px; color: #7a8a7c;">
                     Créé par <a href="https://matteo-dev.fr" style="color: #00856F; text-decoration: none;">Mattéo Dev</a>
